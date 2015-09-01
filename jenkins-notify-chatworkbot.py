@@ -87,17 +87,6 @@ class BuildInfo(object):
         job_url = xml.getElementsByTagName('url')[0].childNodes[0].data
         return BuildInfo(full_display_name, job_url, is_building, status)
 
-class Identity(object):
-    u'''
-    識別子
-    '''
-    def __init__(self, value):
-        self.value = value
-    def __eq__(self, other):
-        return self.value == other.value
-    def __ne__(self, other):
-        return self.value != other.value
-
 ################################################################################
 ###                          classes for jenkins                             ###
 ################################################################################

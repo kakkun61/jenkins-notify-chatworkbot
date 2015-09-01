@@ -1,6 +1,19 @@
+# -*- coding: utf-8 -*-
+
 import urllib
 import urllib2
 import json
+
+class Identity(object):
+    u'''
+    識別子
+    '''
+    def __init__(self, value):
+        self.value = value
+    def __eq__(self, other):
+        return self.value == other.value
+    def __ne__(self, other):
+        return self.value != other.value
 
 ################################################################################
 ###                          classes for chatwork                            ###
