@@ -14,7 +14,7 @@ def main():
         exit(1)
     token = chatwork.ChatworkApiToken(sys.argv[1])
     room = chatwork.ChatworkRoom(sys.argv[2])
-    message = sys.argv[3]
+    message = sys.argv[3].decode('utf_8')
     client = chatwork.ChatworkClient(token)
     client.send_message(room, message)
 
